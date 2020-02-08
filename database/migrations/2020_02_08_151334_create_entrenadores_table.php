@@ -32,4 +32,5 @@ class CreateEntrenadoresTable extends Migration
     {
         Schema::dropIfExists('entrenadores');
     }
+    //comentario prueba
 }
