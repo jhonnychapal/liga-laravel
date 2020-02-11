@@ -13,7 +13,7 @@ class EstadioController extends Controller
      */
     public function index()
     {
-        //
+        return view('liga.estadios');
     }
 
     /**
@@ -23,7 +23,7 @@ class EstadioController extends Controller
      */
     public function create()
     {
-        //
+        return view('estadio.create');
     }
 
     /**
@@ -45,7 +45,7 @@ class EstadioController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('estadio.show', array('id'=>$id));
     }
 
     /**
@@ -56,7 +56,7 @@ class EstadioController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('estadio.edit', array('id'=>$id));
     }
 
     /**

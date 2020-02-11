@@ -13,7 +13,7 @@ class ClubController extends Controller
      */
     public function index()
     {
-        //
+        return view('liga.clubes');
     }
 
     /**
@@ -23,7 +23,7 @@ class ClubController extends Controller
      */
     public function create()
     {
-        //
+        return view('');
     }
 
     /**
@@ -45,7 +45,7 @@ class ClubController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('club.show', array('id'=>$id));
     }
 
     /**
@@ -56,7 +56,7 @@ class ClubController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('club.edit', array('id'=>$id));
     }
 
     /**

@@ -13,7 +13,7 @@ class JugadorController extends Controller
      */
     public function index()
     {
-        //
+        return view('liga.jugadores');
     }
 
     /**
@@ -23,7 +23,7 @@ class JugadorController extends Controller
      */
     public function create()
     {
-        //
+        return view('jugador');
     }
 
     /**
@@ -45,7 +45,7 @@ class JugadorController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('jugador.show', array('id'=>$id));
     }
 
     /**
@@ -56,7 +56,7 @@ class JugadorController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('jugador.edit', array('id'=>$id));
     }
 
     /**
