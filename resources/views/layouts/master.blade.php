@@ -47,13 +47,13 @@
               <a href="#" class="text-secondary px-2"><span class="icon-linkedin"></span></a>
             </div>
             <div class="col-6 col-md-9 text-right">
-              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-envelope mr-3"></span> <span class="d-none d-md-block">youremail@domain.com</span></a></div>
+              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-envelope mr-3"></span> <span class="d-none d-md-block">admin@laliga.com</span></a></div>
               <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-phone mr-0 mr-md-3"></span> <span class="d-none d-md-block">+1 232 3532 321</span></a></div>
             </div>
           </div>
         </div>
       </div>
-      <nav class="site-navigation position-relative text-right bg-black text-md-right" role="navigation">
+      <nav class="site-navigation text-right bg-black text-md-right" role="navigation">
         <div class="container position-relative">
           <div class="site-logo">
             <a href="index.html"><img src="{{ url('assets/theme/images/logo.png') }}" alt=""></a>
@@ -64,7 +64,7 @@
           <ul class="site-menu js-clone-nav d-none d-md-block">
             <li><a href="home">Inicio</a></li>
             <li><a href="resultados">Resultados</a></li>
-            <li><a href="clasificacion">Clasificacion</a></li>
+            <li><a href="jugadores">Jugadores</a></li>
             <li><a href="clubes">Clubes</a></li>
             <li><a href="estadios">Estadios</a></li>
           </ul>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Clubes;
 
 class ClubController extends Controller
 {
@@ -13,7 +14,8 @@ class ClubController extends Controller
      */
     public function index()
     {
-        return view('liga.clubes');
+        $clubes = Clubes::all();
+        return view('liga.clubes.index', compact('clubes'));
     }
 
     /**
@@ -21,9 +23,9 @@ class ClubController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('');
+        return view('liga.clubes.create');
     }
 
     /**
@@ -32,9 +34,16 @@ class ClubController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function postCreate(Request $request)
     {
-        //
+        $newClub = new Clubes;
+        $newClub -> nomClub = $request -> input('nomClub');
+        $newClub -> entrenador = $request -> input('entrenador');
+        $newClub -> estadio = $request -> input('estadio');
+        $newClub -> liga = $request -> input('liga');
+        $newClub -> escudo = $request -> input('escudo');
+        $newClub -> save();
+        return redirect() -> action('ClubController@index');
     }
 
     /**

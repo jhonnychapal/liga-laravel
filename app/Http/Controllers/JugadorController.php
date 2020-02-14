@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Jugadores;
+use App\Clubes;
 
 class JugadorController extends Controller
 {
@@ -13,7 +15,8 @@ class JugadorController extends Controller
      */
     public function index()
     {
-        return view('liga.jugadores');
+        $jugadores = Jugadores::all();
+        return view('liga.jugadores.index', compact('jugadores'));
     }
 
     /**
@@ -43,9 +46,11 @@ class JugadorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function getShow($idClub)
     {
-        return view('jugador.show', array('id'=>$id));
+        $jugador = Jugadores::all();
+        $club = Clubes::findOrFail($idClub);
+        return view('liga.jugadores.jugadores', compact('jugadores', 'clubes'));
     }
 
     /**
